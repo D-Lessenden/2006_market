@@ -38,4 +38,6 @@ class VendorTest < Minitest::Test
     #the method behaves exatly how I want it to but I cannot get the test to work
     assert_equal @vendor.inventory, @vendor.inventory
   end
+
+
 end
