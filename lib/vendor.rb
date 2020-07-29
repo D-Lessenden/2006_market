@@ -18,12 +18,20 @@ attr_reader :name, :inventory
   end
 
   def stock(item, quantity)
-    if @inventory[item] == item
+    if @inventory[item]
       @inventory[item] += quantity
     else @inventory[item] = quantity
     end
   end
 
+
+  def potential_revenue
+    revenue = 0
+    @inventory.each do |k, v|
+      revenue += k.price * v
+    end
+    revenue
+  end
 
 
 end
